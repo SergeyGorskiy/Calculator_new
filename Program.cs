@@ -10,7 +10,7 @@ namespace Calculator_new
 
             var firstValue = control.InputFirstValue();
 
-            var secondValue = control.InputSecondtValue();
+            var secondValue = control.InputSecondValue();
 
             var command = control.InputCommand();
 

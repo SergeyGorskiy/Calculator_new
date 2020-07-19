@@ -25,7 +25,7 @@ namespace Calculator_new
             }
         }
 
-        public double InputSecondtValue()
+        public double InputSecondValue()
         {
             while (true)
             {

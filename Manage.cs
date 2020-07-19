@@ -26,7 +26,7 @@ namespace Calculator_new
                 {
                     Console.WriteLine($"Число №1: \n{result}");
 
-                    var secondValue2 = control.InputSecondtValue();
+                    var secondValue2 = control.InputSecondValue();
 
                     var command2 = control.InputCommand();
 
