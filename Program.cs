@@ -2,11 +2,11 @@
 
 namespace Calculator_new
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Control control = new Control();
+            var control = new Control();
 
             var firstValue = control.InputFirstValue();
 
@@ -14,9 +14,9 @@ namespace Calculator_new
 
             var command = control.InputCommand();
 
-            Manage manage = new Manage();
+            var manage = new Manage();
 
-            var result = manage.Reset(firstValue, secondValue, command);
+            manage.Reset(firstValue, secondValue, command);
         }
     }
 }

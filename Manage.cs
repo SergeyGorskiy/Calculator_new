@@ -6,12 +6,11 @@ namespace Calculator_new
 {
     public class Manage
     {
-
-        Control control = new Control();
+        private readonly Control _control = new Control();
 
         public double Reset(double firstValue, double secondValue, string command)
         {
-            var result = control.Calculate(firstValue, secondValue, command);
+            var result = _control.Calculate(firstValue, secondValue, command);
 
             Console.WriteLine($"\nРезультат операции: {result}");
 
@@ -26,11 +25,11 @@ namespace Calculator_new
                 {
                     Console.WriteLine($"Число №1: \n{result}");
 
-                    var secondValue2 = control.InputSecondValue();
+                    var secondValue2 = _control.InputSecondValue();
 
-                    var command2 = control.InputCommand();
+                    var command2 = _control.InputCommand();
 
-                    var result2 = control.Calculate(result, secondValue2, command2);
+                    var result2 = _control.Calculate(result, secondValue2, command2);
 
                     result = result2;
 

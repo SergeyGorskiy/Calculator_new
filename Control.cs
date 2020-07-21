@@ -33,7 +33,7 @@ namespace Calculator_new
 
                 var input = Console.ReadLine();
 
-                if (double.TryParse(input, out double secondValue))
+                if (double.TryParse(input, out var secondValue))
                 {
                     return secondValue;
                 }
@@ -62,33 +62,35 @@ namespace Calculator_new
             }
         }
 
-        Calculator calculator = new Calculator();
+        private readonly Calculator _calculator = new Calculator();
 
         public double Calculate(double firstValue, double secondValue, string command)
         {
             while (true)
             {
-                if (command == "+")
+                switch (command)
                 {
-                    var result = calculator.Sum(firstValue, secondValue);
-                    return result;
+                    case "+":
+                    {
+                        var result = _calculator.Sum(firstValue, secondValue);
+                        return result;
+                    }
+                    case "-":
+                    {
+                        var result = _calculator.Dif(firstValue, secondValue);
+                        return result;
+                    }
+                    case "*":
+                    {
+                        var result = _calculator.Mult(firstValue, secondValue);
+                        return result;
+                    }
+                    case "/":
+                    {
+                        var result = _calculator.Div(firstValue, secondValue);
+                        return result;
+                    }
                 }
-                if (command == "-")
-                {
-                    var result = calculator.Dif(firstValue, secondValue);
-                    return result;
-                }
-                if (command == "*")
-                {
-                    var result = calculator.Mult(firstValue, secondValue);
-                    return result;
-                }
-                if (command == "/")
-                {
-                    var result = calculator.Div(firstValue, secondValue);
-                    return result;
-                }
-
             }
 
         }
